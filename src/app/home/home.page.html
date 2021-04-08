@@ -1,20 +1,170 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="purple">
+    <ion-title>Home</ion-title>
+    <!-- Menu Icon -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card-content>
+    <!-- Position Component -->
+    <div class="ion-text-center">
+      <ion-card-title>Center Any Component</ion-card-title>
+      <ion-button color="purple" routerLink="/about">Go to About</ion-button>
+    </div>
+  </ion-card-content>
+  <ion-card>
+    <!-- Grid Component -->
+    <ion-grid>
+      <ion-row class="ion-text-center">
+        <ion-col size="4" routerLink="/home">
+          <ion-icon name="home" color="purple" size="large"></ion-icon>
+          <p>Home</p>
+        </ion-col>
+        <ion-col size="4" routerLink="/about">
+          <ion-icon name="bag-add" color="primary" size="large"></ion-icon>
+          <p>About</p>
+        </ion-col>
+        <ion-col size="4" routerLink="/contact">
+          <ion-icon name="chatbox" color="secondary" size="large"></ion-icon>
+          <p>ChatBox</p>
+        </ion-col>
+      </ion-row>
+      <div style="width: 100%; border-top: 1px solid #ed4ed4"></div>
+      <ion-row class="ion-text-center">
+        <ion-col size="4" routerLink="/home">
+          <ion-icon name="home" color="danger" size="large"></ion-icon>
+          <p>Home</p>
+        </ion-col>
+        <ion-col size="4" routerLink="/about">
+          <ion-icon name="bag-add" color="danger" size="large"></ion-icon>
+          <p>About</p>
+        </ion-col>
+        <ion-col size="4" routerLink="/contact">
+          <ion-icon name="chatbox" color="danger" size="large"></ion-icon>
+          <p>ChatBox</p>
+        </ion-col>
+      </ion-row>
+      <div style="width: 100%; border-top: 1px solid #ed4ed4"></div>
+      <ion-row class="ion-text-center">
+        <ion-col size="6" routerLink="/">
+          <ion-icon name="home" color="danger" size="large"></ion-icon>
+          <p>Home</p>
+        </ion-col>
+        <ion-col size="6" routerLink="/">
+          <ion-icon name="bag-add" color="danger" size="large"></ion-icon>
+          <p>About</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- List Menu Item -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>List Menu</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item routerLink="/contact">
+          <ion-icon slot="start" name="man" color="danger"></ion-icon>
+          <ion-label>Contact</ion-label>
+        </ion-item>
+        <ion-item routerLink="/about">
+          <ion-icon slot="start" name="book" color="danger"></ion-icon>
+          <ion-label>About</ion-label>
+        </ion-item>
+        <ion-item routerLink="/home">
+          <ion-icon slot="start" name="heart" color="danger"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- List Component -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>List Component</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-card-title>List title here</ion-card-title>
+        </ion-item>
+        <ion-item>
+          <ion-label>List Item 1</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>List Item 2</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>List Item 3</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <!-- External Link -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>External Link</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <a href="https://google.com">Google</a>
+    </ion-card-content>
+  </ion-card>
+  <!-- Video Component -->
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>Youtube Embed</ion-card-title>
+      <ion-card-subtitle>Lorem ipsum dolor sit amet.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <iframe
+        width="100%"
+        height="auto"
+        src="https://www.youtube.com/embed/J86QK0Njfv4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </ion-card-content>
+  </ion-card>
+  <!-- Card Component -->
+  <!-- Audio Component -->
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Audio File</ion-card-title>
+      <ion-card-subtitle>Lorem ipsum dolor sit amet.</ion-card-subtitle>
+      <div style="width: 100%; border-top: 1px solid black"></div>
+    </ion-card-header>
+    <ion-card-content>
+      <audio src="/assets/audio/sample.mp3" controls></audio>
+    </ion-card-content>
+  </ion-card>
+  <!-- Card Component -->
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Welcome to my App</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Icon Component -->
+      <ion-icon name="thumbs-up" size="large" color="warning"></ion-icon>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, minus.
+        <br />
+        beatae. Hello, World
+      </p>
+      <ion-img src="/assets/images/mountain.jpeg"></ion-img>
+      <!-- Button Component -->
+      <ion-button expand="block" color="secondary" routerLink="/about"
+        >Go To Page</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
 </ion-content>
